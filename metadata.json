@@ -1,0 +1,6 @@
+{
+  "name": "Vancouver Mitsubishi",
+  "description": "Vancouver Mitsubishi dealership showcase featuring the Mitsubishi SUV and PHEV lineup, financing, service department, and dealership contact information.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

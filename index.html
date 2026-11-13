@@ -1,0 +1,2519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vancouver Mitsubishi | The Drive Is Back in Vancouver</title>
+  <meta name="description" content="Vancouver Mitsubishi is proud to be bringing Mitsubishi back to the Vancouver area. Explore our SUV and PHEV lineup, financing options, and dedicated service department at 1885 Clark Drive." />
+  <meta property="og:title" content="Vancouver Mitsubishi | The Drive Is Back in Vancouver" />
+  <meta property="og:description" content="Discover a huge selection of Mitsubishi vehicles, exceptional customer service, and an automotive experience designed around you in Vancouver, BC." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red: #E60012;
+      --red-hover: #C4000F;
+      --black: #0A0A0A;
+      --graphite: #191919;
+      --graphite-border: rgba(255, 255, 255, 0.12);
+      --white: #FFFFFF;
+      --soft-grey: #F4F4F4;
+      --silver: #BFC3C7;
+      --ink: #111111;
+      --ink-muted: #52555A;
+      --hairline: rgba(10, 10, 10, 0.1);
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --header-height: 72px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-height);
+      background-color: var(--black);
+      color: var(--ink);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--white);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding-left: 48px;
+        padding-right: 48px;
+      }
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, .font-display {
+      font-family: var(--font-display);
+      margin: 0;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+
+    .section-kicker--light {
+      color: var(--silver);
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.2vw, 2.85rem);
+      font-weight: 600;
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 60ch;
+      margin: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 12px 24px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background-color 180ms var(--ease-out), color 180ms var(--ease-out), border-color 180ms var(--ease-out), transform 180ms var(--ease-out);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      background-color: var(--red);
+      color: var(--white);
+      border-color: var(--red);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--red-hover);
+      border-color: var(--red-hover);
+    }
+
+    .btn-outline-light {
+      background-color: rgba(10, 10, 10, 0.35);
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.36);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-outline-light:hover {
+      background-color: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+
+    .btn-outline-dark {
+      background-color: transparent;
+      color: var(--black);
+      border-color: rgba(10, 10, 10, 0.25);
+    }
+
+    .btn-outline-dark:hover {
+      background-color: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .btn-dark {
+      background-color: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .btn-dark:hover {
+      background-color: var(--graphite);
+      border-color: var(--graphite);
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--header-height);
+      background-color: rgba(10, 10, 10, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: background-color 220ms var(--ease-out), border-color 220ms var(--ease-out);
+    }
+
+    .site-header.is-scrolled {
+      background-color: rgba(10, 10, 10, 0.96);
+      border-bottom-color: rgba(255, 255, 255, 0.14);
+    }
+
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .brand-wordmark {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .primary-nav {
+      display: none;
+      align-items: center;
+      gap: 24px;
+    }
+
+    @media (min-width: 1120px) {
+      .primary-nav {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      position: relative;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--silver);
+      padding: 6px 0;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 180ms var(--ease-out);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 200ms var(--ease-out);
+    }
+
+    .nav-link:hover,
+    .nav-link.is-active {
+      color: var(--white);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.is-active::after {
+      transform: scaleX(1);
+    }
+
+    .header-actions {
+      display: none;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) {
+      .header-actions {
+        display: flex;
+      }
+    }
+
+    .header-actions .btn {
+      min-height: 40px;
+      padding: 9px 16px;
+      font-size: 12px;
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: var(--white);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 1120px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 95;
+      background-color: var(--black);
+      padding: 28px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-8px);
+      transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out);
+    }
+
+    .mobile-drawer.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .mobile-nav-list {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--graphite-border);
+    }
+
+    .mobile-nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 4px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--white);
+      border-bottom: 1px solid var(--graphite-border);
+    }
+
+    .mobile-drawer-actions {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      background-color: var(--black);
+      color: var(--white);
+      padding-top: calc(var(--header-height) + 48px);
+      padding-bottom: 72px;
+      overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        align-items: center;
+        padding-bottom: 84px;
+      }
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: radial-gradient(circle at 70% 40%, #26292e 0%, #0a0a0a 75%);
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 62% center;
+    }
+
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(10, 10, 10, 0.90) 0%, rgba(10, 10, 10, 0.64) 48%, rgba(10, 10, 10, 0.20) 100%),
+        linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.05) 35%, rgba(10, 10, 10, 0.85) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 660px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 18px;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.35rem, 4.8vw, 4.15rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero-subcopy {
+      font-size: clamp(1rem, 1.35vw, 1.18rem);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 50ch;
+      margin: 0 0 34px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .scroll-cue {
+      position: absolute;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--silver);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .scroll-cue-line {
+      width: 1px;
+      height: 28px;
+      background: linear-gradient(to bottom, var(--red), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% {
+        opacity: 0.35;
+        transform: translateY(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(5px);
+      }
+    }
+
+    /* Section Spacing */
+    .section {
+      padding: 88px 0;
+    }
+
+    @media (min-width: 1024px) {
+      .section {
+        padding: 112px 0;
+      }
+    }
+
+    .section--dark {
+      background-color: var(--black);
+      color: var(--white);
+    }
+
+    .section--graphite {
+      background-color: var(--graphite);
+      color: var(--white);
+    }
+
+    .section--light {
+      background-color: var(--white);
+      color: var(--ink);
+    }
+
+    .section--soft {
+      background-color: var(--soft-grey);
+      color: var(--ink);
+    }
+
+    /* Vehicle Showcase */
+    .showcase-header {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--graphite-border);
+      margin-bottom: 44px;
+    }
+
+    @media (min-width: 960px) {
+      .showcase-header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+
+    .filter-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 5px;
+      background-color: var(--graphite);
+      border: 1px solid var(--graphite-border);
+    }
+
+    .filter-btn {
+      min-height: 40px;
+      padding: 9px 18px;
+      background: transparent;
+      border: none;
+      color: var(--silver);
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: background-color 180ms var(--ease-out), color 180ms var(--ease-out);
+    }
+
+    .filter-btn:hover {
+      color: var(--white);
+    }
+
+    .filter-btn.is-active {
+      background-color: var(--red);
+      color: var(--white);
+    }
+
+    .vehicles-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .vehicles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1120px) {
+      .vehicles-grid.is-single-row-featured {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .vehicle-card {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--graphite);
+      border: 1px solid var(--graphite-border);
+      overflow: hidden;
+      transition: border-color 220ms var(--ease-out), transform 220ms var(--ease-out);
+    }
+
+    .vehicle-card:hover {
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-2px);
+    }
+
+    .vehicle-card.is-wide {
+      grid-column: 1 / -1;
+    }
+
+    @media (min-width: 960px) {
+      .vehicle-card.is-wide {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        align-items: stretch;
+      }
+    }
+
+    .vehicle-card.is-hidden {
+      display: none;
+    }
+
+    .vehicle-media {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, #232528 0%, #121316 100%);
+      overflow: hidden;
+    }
+
+    .vehicle-card.is-wide .vehicle-media {
+      aspect-ratio: 16 / 10;
+      height: 100%;
+    }
+
+    .vehicle-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 420ms var(--ease-out);
+    }
+
+    .vehicle-card:hover .vehicle-media img {
+      transform: scale(1.035);
+    }
+
+    .vehicle-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      flex: 1;
+    }
+
+    @media (min-width: 1024px) {
+      .vehicle-body {
+        padding: 34px;
+      }
+    }
+
+    .vehicle-meta-line {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 10px;
+    }
+
+    .vehicle-name {
+      font-size: clamp(1.4rem, 2vw, 1.85rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .vehicle-desc {
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.78);
+      margin: 0;
+    }
+
+    .vehicle-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .vehicle-actions .btn {
+      flex: 1 1 auto;
+      min-height: 42px;
+      padding: 10px 18px;
+      font-size: 12px;
+    }
+
+    .showcase-note {
+      margin-top: 28px;
+      font-size: 13px;
+      color: var(--silver);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .showcase-note a {
+      color: var(--white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      padding-bottom: 2px;
+      transition: border-color 180ms var(--ease-out);
+    }
+
+    .showcase-note a:hover {
+      border-color: var(--red);
+    }
+
+    /* Why Vancouver Mitsubishi (Split Layout) */
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 1024px) {
+      .split-layout {
+        grid-template-columns: 1fr 1.12fr;
+        gap: 64px;
+      }
+    }
+
+    .split-media {
+      position: relative;
+      min-height: 360px;
+      background: linear-gradient(135deg, #d7dadd 0%, #eef0f2 100%);
+      overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+      .split-media {
+        min-height: 100%;
+      }
+    }
+
+    .split-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pillar-list {
+      margin-top: 32px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .pillar-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--hairline);
+      align-items: start;
+      transition: background-color 180ms var(--ease-out);
+    }
+
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--red);
+      padding-top: 2px;
+    }
+
+    .pillar-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .pillar-text {
+      font-size: 15px;
+      color: var(--ink-muted);
+      margin: 0;
+    }
+
+    /* Lifestyle Full-Width Section */
+    .lifestyle {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 96px 0;
+      overflow: hidden;
+    }
+
+    .lifestyle-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .lifestyle-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .lifestyle-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(10, 10, 10, 0.72) 0%, rgba(10, 10, 10, 0.52) 45%, rgba(10, 10, 10, 0.90) 100%),
+        linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.25) 65%);
+    }
+
+    .lifestyle-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .lifestyle-copy {
+      max-width: 620px;
+      margin-bottom: 56px;
+    }
+
+    .lifestyle-copy .section-lead {
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .lifestyle-highlights {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    @media (min-width: 768px) {
+      .lifestyle-highlights {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .lifestyle-highlight {
+      padding: 28px 0 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    @media (min-width: 768px) {
+      .lifestyle-highlight {
+        padding: 32px 28px 12px 0;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .lifestyle-highlight:not(:first-child) {
+        padding-left: 28px;
+      }
+
+      .lifestyle-highlight:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    .lifestyle-highlight h3 {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .lifestyle-highlight p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.78);
+      margin: 0;
+    }
+
+    /* Financing Section */
+    .financing-header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 960px) {
+      .financing-header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+
+    .financing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .financing-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .finance-card {
+      background-color: var(--white);
+      border: 1px solid var(--hairline);
+      padding: 34px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      transition: border-color 200ms var(--ease-out), transform 200ms var(--ease-out);
+    }
+
+    .finance-card:hover {
+      border-color: rgba(10, 10, 10, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .finance-icon {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red);
+      margin-bottom: 18px;
+    }
+
+    .finance-card h3 {
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .finance-card p {
+      font-size: 15px;
+      color: var(--ink-muted);
+      margin: 0;
+    }
+
+    .finance-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--black);
+      padding-top: 14px;
+      border-top: 1px solid var(--hairline);
+      transition: color 180ms var(--ease-out);
+    }
+
+    .finance-link:hover {
+      color: var(--red);
+    }
+
+    /* Service Department */
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 1024px) {
+      .service-grid {
+        grid-template-columns: 1.08fr 1fr;
+        gap: 64px;
+      }
+    }
+
+    .service-contact-panel {
+      margin: 30px 0;
+      padding: 24px 0;
+      border-top: 1px solid var(--graphite-border);
+      border-bottom: 1px solid var(--graphite-border);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 560px) {
+      .service-contact-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .service-contact-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 4px;
+    }
+
+    .service-contact-value {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      word-break: break-word;
+    }
+
+    .service-contact-value a:hover {
+      color: var(--red);
+    }
+
+    .service-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 28px 0 32px;
+    }
+
+    .service-highlight-item {
+      padding: 16px 18px;
+      background-color: var(--black);
+      border: 1px solid var(--graphite-border);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .service-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* About Us */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .about-split {
+        grid-template-columns: 1.05fr 1fr;
+        gap: 68px;
+      }
+    }
+
+    .about-details {
+      margin: 28px 0 34px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairline);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 560px) {
+      .about-details {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .about-detail-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 4px;
+    }
+
+    .about-detail-value {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* Customer Reviews */
+    .reviews-panel {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 40px;
+      background-color: var(--white);
+      border: 1px solid var(--hairline);
+    }
+
+    @media (min-width: 960px) {
+      .reviews-panel {
+        grid-template-columns: 1.15fr 1fr;
+        padding: 56px;
+      }
+    }
+
+    .reviews-pillars {
+      display: grid;
+      gap: 20px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 24px;
+    }
+
+    @media (min-width: 960px) {
+      .reviews-pillars {
+        border-top: none;
+        border-left: 1px solid var(--hairline);
+        padding-top: 0;
+        padding-left: 40px;
+      }
+    }
+
+    .review-pillar-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .review-pillar-item p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      margin: 0;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1.08fr;
+        gap: 56px;
+      }
+    }
+
+    .contact-info-list {
+      margin-top: 32px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .contact-info-row {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--hairline);
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    @media (max-width: 520px) {
+      .contact-info-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+    }
+
+    .contact-info-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .contact-info-val {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .contact-info-val a {
+      text-decoration: underline;
+      text-decoration-color: rgba(10, 10, 10, 0.25);
+      text-underline-offset: 3px;
+    }
+
+    .contact-info-val a:hover {
+      color: var(--red);
+      text-decoration-color: var(--red);
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 560px) {
+      .hours-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .hours-block strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .hours-line {
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 1px solid var(--hairline);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      transition: border-color 180ms var(--ease-out), background-color 180ms var(--ease-out), color 180ms var(--ease-out);
+    }
+
+    .social-link:hover {
+      background-color: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
+
+    .contact-right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .inquiry-card {
+      background-color: var(--soft-grey);
+      border: 1px solid var(--hairline);
+      padding: 32px;
+    }
+
+    .inquiry-card h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .inquiry-sub {
+      font-size: 14px;
+      color: var(--ink-muted);
+      margin: 0 0 24px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 560px) {
+      .form-grid--two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background-color: var(--white);
+      border: 1px solid rgba(10, 10, 10, 0.18);
+      font-size: 15px;
+      color: var(--black);
+      border-radius: 0;
+      transition: border-color 180ms var(--ease-out);
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--black);
+    }
+
+    .field-error {
+      font-size: 12px;
+      color: var(--red-hover);
+      min-height: 16px;
+    }
+
+    .form-status {
+      margin-top: 16px;
+      padding: 14px 16px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .form-status.is-visible {
+      display: block;
+    }
+
+    .form-status.is-success {
+      background-color: var(--black);
+      color: var(--white);
+    }
+
+    .map-frame-wrap {
+      border: 1px solid var(--hairline);
+      background-color: var(--soft-grey);
+    }
+
+    .map-frame {
+      display: block;
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+
+    .map-caption {
+      padding: 14px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      background-color: var(--white);
+      border-top: 1px solid var(--hairline);
+    }
+
+    .map-caption a {
+      font-weight: 600;
+      color: var(--black);
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--black);
+      color: var(--silver);
+      padding: 64px 0 36px;
+      border-top: 1px solid var(--graphite-border);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid var(--graphite-border);
+    }
+
+    @media (min-width: 900px) {
+      .footer-top {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand-desc {
+      margin: 16px 0 0;
+      max-width: 38ch;
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(191, 195, 199, 0.85);
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      padding-top: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(191, 195, 199, 0.72);
+    }
+
+    /* Scroll Reveal Animation (progressive, non-blocking) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 520ms var(--ease-out), transform 520ms var(--ease-out);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .scroll-cue-line {
+        animation: none;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .vehicle-card:hover .vehicle-media img {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-link" aria-label="Vancouver Mitsubishi Home">
+        <svg width="30" height="26" viewBox="-42 -48 84 74" aria-hidden="true" focusable="false">
+          <polygon points="0,0 13,-22.517 0,-45.033 -13,-22.517" fill="#E60012" />
+          <polygon points="0,0 26,0 38.971,22.517 13,22.517" fill="#E60012" />
+          <polygon points="0,0 -26,0 -38.971,22.517 -13,22.517" fill="#E60012" />
+        </svg>
+        <span class="brand-wordmark">Vancouver Mitsubishi</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link is-active">Home</a>
+        <a href="#vehicles" class="nav-link">Vehicles</a>
+        <a href="#why-us" class="nav-link">Why Choose Us</a>
+        <a href="#financing" class="nav-link">Financing</a>
+        <a href="#service" class="nav-link">Service</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:6042493888" class="btn btn-outline-light tabular">Call Now</a>
+        <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Inventory</a>
+      </div>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <svg id="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="17" x2="21" y2="17" />
+        </svg>
+        <svg id="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" style="display:none;" aria-hidden="true">
+          <line x1="5" y1="5" x2="19" y2="19" />
+          <line x1="19" y1="5" x2="5" y2="19" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav class="mobile-nav-list" aria-label="Mobile Navigation">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#vehicles" class="mobile-nav-link">Vehicles</a>
+      <a href="#why-us" class="mobile-nav-link">Why Choose Us</a>
+      <a href="#financing" class="mobile-nav-link">Financing</a>
+      <a href="#service" class="mobile-nav-link">Service</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="mobile-drawer-actions">
+      <a href="tel:6042493888" class="btn btn-outline-light tabular">Call Sales · 604-249-3888</a>
+      <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Inventory</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-media">
+        <img
+          src="./src/assets/images/hero_vancouver_suv_1794604255416.jpg"
+          alt="Modern silver Mitsubishi Outlander SUV overlooking the Vancouver skyline and North Shore mountains at twilight"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span>1885 Clark Drive</span>
+            <span aria-hidden="true">·</span>
+            <span>Vancouver, BC</span>
+          </div>
+          <h1 class="hero-headline">THE DRIVE IS BACK IN VANCOUVER.</h1>
+          <p class="hero-subcopy">
+            Discover the Mitsubishi lineup at Vancouver Mitsubishi. Explore a huge selection of vehicles and experience a dealership that puts you first.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#vehicles" class="btn btn-primary">Explore Vehicles</a>
+            <a href="#contact" class="btn btn-outline-light">Contact Our Team</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#vehicles" class="scroll-cue" aria-label="Scroll to vehicle lineup">
+        <span>Scroll</span>
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- Vehicle Showcase -->
+    <section class="section section--dark" id="vehicles">
+      <div class="container">
+        <div class="showcase-header reveal">
+          <div>
+            <span class="section-kicker section-kicker--light">Model Lineup</span>
+            <h2 class="section-title">FIND YOUR NEXT MITSUBISHI</h2>
+            <p class="section-lead" style="color: var(--silver);">
+              Discover a lineup designed for every journey.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="tablist" aria-label="Filter vehicle categories">
+            <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+              All Vehicles
+            </button>
+            <button type="button" class="filter-btn" data-filter="suv" role="tab" aria-selected="false">
+              SUVs
+            </button>
+            <button type="button" class="filter-btn" data-filter="phev" role="tab" aria-selected="false">
+              Plug-in Hybrid
+            </button>
+          </div>
+        </div>
+
+        <div class="vehicles-grid" id="vehicles-grid">
+          <!-- Mitsubishi Outlander -->
+          <article class="vehicle-card reveal" data-categories="all suv">
+            <div class="vehicle-media">
+              <img
+                src="./src/assets/images/hero_vancouver_suv_1794604255416.jpg"
+                alt="Mitsubishi Outlander SUV parked in Vancouver"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="vehicle-body">
+              <div>
+                <div class="vehicle-meta-line">SUV · Flagship Family Crossover</div>
+                <h3 class="vehicle-name">Mitsubishi Outlander</h3>
+                <p class="vehicle-desc">
+                  Crafted with bold road presence and adaptable interior space for city commutes, weekend ski trips, and everyday Vancouver driving.
+                </p>
+              </div>
+              <div class="vehicle-actions">
+                <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Model</a>
+                <button type="button" class="btn btn-outline-light request-info-btn" data-model="Mitsubishi Outlander">Request Information</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mitsubishi Outlander PHEV -->
+          <article class="vehicle-card reveal" data-categories="all suv phev">
+            <div class="vehicle-media">
+              <img
+                src="./src/assets/images/model_outlander_phev_1794604255488.jpg"
+                alt="Pearl white Mitsubishi Outlander PHEV inside an architectural pavilion"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="vehicle-body">
+              <div>
+                <div class="vehicle-meta-line">Plug-in Hybrid · Electrified SUV</div>
+                <h3 class="vehicle-name">Mitsubishi Outlander PHEV</h3>
+                <p class="vehicle-desc">
+                  Pair quiet electric capability for daily Lower Mainland routes with seamless gas-hybrid range whenever the highway calls.
+                </p>
+              </div>
+              <div class="vehicle-actions">
+                <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Model</a>
+                <button type="button" class="btn btn-outline-light request-info-btn" data-model="Mitsubishi Outlander PHEV">Request Information</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mitsubishi Eclipse Cross -->
+          <article class="vehicle-card reveal" data-categories="all suv">
+            <div class="vehicle-media">
+              <img
+                src="./src/assets/images/model_eclipse_cross_1794604256251.jpg"
+                alt="Crimson red Mitsubishi Eclipse Cross compact coupe-SUV in Pacific Northwest setting"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="vehicle-body">
+              <div>
+                <div class="vehicle-meta-line">SUV · Sporty Compact Crossover</div>
+                <h3 class="vehicle-name">Mitsubishi Eclipse Cross</h3>
+                <p class="vehicle-desc">
+                  Sculpted coupe-inspired lines meet nimble handling and confident all-weather poise for coastal streets and winding roads.
+                </p>
+              </div>
+              <div class="vehicle-actions">
+                <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Model</a>
+                <button type="button" class="btn btn-outline-light request-info-btn" data-model="Mitsubishi Eclipse Cross">Request Information</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mitsubishi RVR -->
+          <article class="vehicle-card reveal" data-categories="all suv">
+            <div class="vehicle-media">
+              <img
+                src="./src/assets/images/model_rvr_1794604257913.jpg"
+                alt="Charcoal grey Mitsubishi RVR outside a contemporary Vancouver building"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="vehicle-body">
+              <div>
+                <div class="vehicle-meta-line">SUV · Agile Urban Crossover</div>
+                <h3 class="vehicle-name">Mitsubishi RVR</h3>
+                <p class="vehicle-desc">
+                  Compact proportions engineered for effortless city parking without giving up practicality, comfort, or weekend cargo room.
+                </p>
+              </div>
+              <div class="vehicle-actions">
+                <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Model</a>
+                <button type="button" class="btn btn-outline-light request-info-btn" data-model="Mitsubishi RVR">Request Information</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Other Available Models -->
+          <article class="vehicle-card is-wide reveal" data-categories="all">
+            <div class="vehicle-media">
+              <img
+                src="./src/assets/images/dealership_service_bay_1794604258527.jpg"
+                alt="Vancouver Mitsubishi modern showroom and vehicle preparation space"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="vehicle-body">
+              <div>
+                <div class="vehicle-meta-line">Showroom Selection · New &amp; Pre-Owned</div>
+                <h3 class="vehicle-name">Other Available Mitsubishi Models</h3>
+                <p class="vehicle-desc">
+                  Looking for another Mitsubishi model or browsing pre-owned vehicles? Explore current arrivals and full model details directly on the official Vancouver Mitsubishi showroom website.
+                </p>
+              </div>
+              <div class="vehicle-actions">
+                <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Full Lineup</a>
+                <button type="button" class="btn btn-outline-light request-info-btn" data-model="General Vehicle Availability">Request Information</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="showcase-note">
+          <span>Model overview only. Live vehicle availability, trim details, and pricing are maintained on the official dealership website.</span>
+          <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer">Visit vancouvermitsubishi.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Vancouver Mitsubishi -->
+    <section class="section section--light" id="why-us">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-media reveal">
+            <img
+              src="./src/assets/images/model_rvr_1794604257913.jpg"
+              alt="Mitsubishi SUV outside modern Vancouver architecture"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+
+          <div class="reveal">
+            <span class="section-kicker">Why Choose Us</span>
+            <h2 class="section-title">MORE THAN A DEALERSHIP. YOUR AUTOMOTIVE PARTNER.</h2>
+            <p class="section-lead" style="color: var(--ink-muted);">
+              Vancouver Mitsubishi is proud to be bringing Mitsubishi back to the Vancouver area. Discover a huge selection of vehicles, exceptional customer service, and an automotive experience designed around you.
+            </p>
+
+            <div class="pillar-list">
+              <div class="pillar-item">
+                <span class="pillar-num tabular">01</span>
+                <div>
+                  <h3 class="pillar-title">HUGE VEHICLE SELECTION</h3>
+                  <p class="pillar-text">Explore a wide selection of Mitsubishi vehicles.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-num tabular">02</span>
+                <div>
+                  <h3 class="pillar-title">CUSTOMER-FIRST EXPERIENCE</h3>
+                  <p class="pillar-text">A welcoming experience focused on your needs.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-num tabular">03</span>
+                <div>
+                  <h3 class="pillar-title">FINANCING OPTIONS</h3>
+                  <p class="pillar-text">Explore vehicle financing options and find a suitable payment plan.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-num tabular">04</span>
+                <div>
+                  <h3 class="pillar-title">SERVICE &amp; PARTS</h3>
+                  <p class="pillar-text">Support for your vehicle throughout your ownership journey.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mitsubishi Lifestyle Section -->
+    <section class="lifestyle" id="lifestyle">
+      <div class="lifestyle-bg">
+        <img
+          src="./src/assets/images/lifestyle_bc_highway_1794604257407.jpg"
+          alt="Mitsubishi SUV travelling along a scenic British Columbia coastal highway"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+      <div class="lifestyle-scrim" aria-hidden="true"></div>
+
+      <div class="container lifestyle-inner">
+        <div class="lifestyle-copy reveal">
+          <span class="section-kicker section-kicker--light">Designed for British Columbia</span>
+          <h2 class="section-title" style="color: var(--white);">BUILT FOR EVERY JOURNEY.</h2>
+          <p class="section-lead">
+            From daily city drives to unforgettable weekend adventures, discover vehicles designed to make every journey count.
+          </p>
+        </div>
+
+        <div class="lifestyle-highlights reveal">
+          <div class="lifestyle-highlight">
+            <h3>Everyday Versatility</h3>
+            <p>Flexible seating and cargo layouts built to adapt smoothly between weekday errands and family road trips.</p>
+          </div>
+          <div class="lifestyle-highlight">
+            <h3>Modern Technology</h3>
+            <p>Intuitive cabin displays and thoughtful driver convenience designed to keep every drive connected and clear.</p>
+          </div>
+          <div class="lifestyle-highlight">
+            <h3>Adventure-Ready Performance</h3>
+            <p>Balanced handling and composed traction suited to rainy coastal streets, steep grades, and mountain highways.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financing Section -->
+    <section class="section section--soft" id="financing">
+      <div class="container">
+        <div class="financing-header reveal">
+          <div>
+            <span class="section-kicker">Finance Centre</span>
+            <h2 class="section-title">YOUR NEXT VEHICLE. YOUR WAY.</h2>
+            <p class="section-lead" style="color: var(--ink-muted);">
+              Explore financing options and take the next step toward driving your new Mitsubishi.
+            </p>
+          </div>
+
+          <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Explore Financing
+          </a>
+        </div>
+
+        <div class="financing-grid">
+          <article class="finance-card reveal">
+            <div>
+              <div class="finance-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square">
+                  <rect x="2" y="5" width="20" height="14" />
+                  <line x1="2" y1="10" x2="22" y2="10" />
+                </svg>
+              </div>
+              <h3>Explore Financing</h3>
+              <p>Review flexible purchase and lease options structured around your driving habits and monthly budget.</p>
+            </div>
+            <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="finance-link">
+              Visit Finance Centre
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <article class="finance-card reveal">
+            <div>
+              <div class="finance-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square">
+                  <path d="M9 11l3 3L22 4" />
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                </svg>
+              </div>
+              <h3>Get Pre-Approved</h3>
+              <p>Submit an application online or speak directly with our team to understand available options before you visit.</p>
+            </div>
+            <button type="button" class="finance-link request-info-btn" data-model="Financing & Pre-Approval Inquiry" style="background:none;border-left:none;border-right:none;border-bottom:none;cursor:pointer;text-align:left;width:100%;">
+              Connect With Our Team
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+
+          <article class="finance-card reveal">
+            <div>
+              <div class="finance-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+              <h3>Value Your Trade-In</h3>
+              <p>Put the value of your current vehicle toward your next Mitsubishi with a straightforward dealership appraisal.</p>
+            </div>
+            <button type="button" class="finance-link request-info-btn" data-model="Trade-In Appraisal" style="background:none;border-left:none;border-right:none;border-bottom:none;cursor:pointer;text-align:left;width:100%;">
+              Request Trade-In Review
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Department -->
+    <section class="section section--graphite" id="service">
+      <div class="container">
+        <div class="service-grid">
+          <div class="reveal">
+            <span class="section-kicker section-kicker--light">Mitsubishi Service</span>
+            <h2 class="section-title" style="color: var(--white);">EXPERT CARE FOR EVERY KILOMETRE.</h2>
+            <p class="section-lead" style="color: rgba(255, 255, 255, 0.8);">
+              Keep your vehicle ready for the road with professional service and support from the Vancouver Mitsubishi service team.
+            </p>
+
+            <div class="service-contact-panel">
+              <div>
+                <div class="service-contact-label">Service Contact</div>
+                <div class="service-contact-value">Carson Leung</div>
+              </div>
+              <div>
+                <div class="service-contact-label">Service Phone</div>
+                <div class="service-contact-value tabular">
+                  <a href="tel:6042493881">604-249-3881</a>
+                </div>
+              </div>
+              <div style="grid-column: 1 / -1;">
+                <div class="service-contact-label">Service Email</div>
+                <div class="service-contact-value">
+                  <a href="mailto:reception@mitsubishiservice.com">reception@mitsubishiservice.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-highlights">
+              <div class="service-highlight-item">Vehicle Maintenance</div>
+              <div class="service-highlight-item">Genuine Parts</div>
+              <div class="service-highlight-item">Tire Services</div>
+              <div class="service-highlight-item">General Vehicle Care</div>
+            </div>
+
+            <div class="service-cta-row">
+              <a href="tel:6042493881" class="btn btn-primary tabular">Call Service Department</a>
+              <a href="mailto:reception@mitsubishiservice.com" class="btn btn-outline-light">Email Service Team</a>
+            </div>
+          </div>
+
+          <div class="split-media reveal">
+            <img
+              src="./src/assets/images/dealership_service_bay_1794604258527.jpg"
+              alt="Modern Vancouver Mitsubishi service bay and customer reception area"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="section section--light" id="about">
+      <div class="container">
+        <div class="about-split">
+          <div class="split-media reveal" style="min-height: 420px;">
+            <img
+              src="./src/assets/images/model_outlander_phev_1794604255488.jpg"
+              alt="Mitsubishi Outlander PHEV at modern dealership architectural entrance"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+
+          <div class="reveal">
+            <span class="section-kicker">About Us</span>
+            <h2 class="section-title">PROUD TO BRING MITSUBISHI BACK TO VANCOUVER.</h2>
+            <p class="section-lead" style="color: var(--ink-muted);">
+              Vancouver Mitsubishi is proud to serve Vancouver and surrounding communities. Our goal is to make discovering, purchasing, and maintaining your next vehicle a welcoming and straightforward experience.
+            </p>
+
+            <div class="about-details">
+              <div>
+                <div class="about-detail-label">Showroom Location</div>
+                <div class="about-detail-value">1885 Clark Drive, Vancouver, BC</div>
+              </div>
+              <div>
+                <div class="about-detail-label">Sales &amp; General Inquiries</div>
+                <div class="about-detail-value tabular">604-249-3888</div>
+              </div>
+            </div>
+
+            <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+              Discover Vancouver Mitsubishi
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section section--soft" id="reviews">
+      <div class="container">
+        <div class="reviews-panel reveal">
+          <div>
+            <span class="section-kicker">Driver Experiences</span>
+            <h2 class="section-title">OUR CUSTOMERS. OUR PRIDE.</h2>
+            <p class="section-lead" style="color: var(--ink-muted); margin-bottom: 28px;">
+              Read verified feedback from drivers across Vancouver and the Lower Mainland directly on our Google Business Profile, or connect with our team to share your visit.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Vancouver+Mitsubishi+1885+Clark+Drive+Vancouver+BC"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                View Google Reviews
+              </a>
+              <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+                Official Dealership Site
+              </a>
+            </div>
+          </div>
+
+          <div class="reviews-pillars">
+            <div class="review-pillar-item">
+              <h3>Welcoming Showroom Guidance</h3>
+              <p>Clear answers and unhurried vehicle walkarounds focused on finding the right fit for your household.</p>
+            </div>
+            <div class="review-pillar-item">
+              <h3>Straightforward Communication</h3>
+              <p>Direct phone and email access to both our Clark Drive sales advisors and service reception team.</p>
+            </div>
+            <div class="review-pillar-item">
+              <h3>Ongoing Ownership Support</h3>
+              <p>Dedicated maintenance scheduling and genuine parts support long after delivery day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section--light" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="reveal">
+            <span class="section-kicker">Visit or Reach Out</span>
+            <h2 class="section-title">CONNECT WITH VANCOUVER MITSUBISHI.</h2>
+            <p class="section-lead" style="color: var(--ink-muted);">
+              Visit our showroom on Clark Drive or reach our sales and service departments directly by phone or email.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-row">
+                <div class="contact-info-label">Address</div>
+                <div class="contact-info-val">1885 Clark Drive, Vancouver, BC, V5N 3G5, Canada</div>
+              </div>
+
+              <div class="contact-info-row">
+                <div class="contact-info-label">Sales Phone</div>
+                <div class="contact-info-val tabular">
+                  <a href="tel:6042493888">604-249-3888</a>
+                </div>
+              </div>
+
+              <div class="contact-info-row">
+                <div class="contact-info-label">Service Dept</div>
+                <div class="contact-info-val">
+                  Carson Leung · <a href="tel:6042493881" class="tabular">604-249-3881</a><br />
+                  <a href="mailto:reception@mitsubishiservice.com">reception@mitsubishiservice.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-row">
+                <div class="contact-info-label">Website</div>
+                <div class="contact-info-val">
+                  <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer">www.vancouvermitsubishi.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-row">
+                <div class="contact-info-label">Hours</div>
+                <div class="contact-info-val">
+                  <div class="hours-grid tabular">
+                    <div class="hours-block">
+                      <strong>Sales Department</strong>
+                      <div class="hours-line">Mon – Tue: 9:00 AM – 7:00 PM</div>
+                      <div class="hours-line">Wed: 11:00 AM – 5:00 PM</div>
+                      <div class="hours-line">Thu: 9:00 AM – 7:00 PM</div>
+                      <div class="hours-line">Fri – Sat: 9:00 AM – 6:00 PM</div>
+                      <div class="hours-line">Sun: 11:00 AM – 5:00 PM</div>
+                    </div>
+                    <div class="hours-block">
+                      <strong>Service &amp; Parts</strong>
+                      <div class="hours-line">Mon – Tue: 8:30 AM – 5:00 PM</div>
+                      <div class="hours-line">Wed: Closed</div>
+                      <div class="hours-line">Thu – Sat: 8:30 AM – 5:00 PM</div>
+                      <div class="hours-line">Sun: Closed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-row" aria-label="Vancouver Mitsubishi Social Media">
+              <a href="https://www.facebook.com/vancouvermitsubishi.ca" target="_blank" rel="noopener noreferrer" class="social-link">
+                Facebook
+              </a>
+              <a href="https://www.instagram.com/vancouver_mitsubishi/" target="_blank" rel="noopener noreferrer" class="social-link">
+                Instagram
+              </a>
+              <a href="https://www.youtube.com/@vancouvermitsubishi9072" target="_blank" rel="noopener noreferrer" class="social-link">
+                YouTube
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-right-stack reveal">
+            <!-- Inquiry Form -->
+            <div class="inquiry-card">
+              <h3>Request Information</h3>
+              <p class="inquiry-sub">
+                Have a question about a Mitsubishi model, financing, or service? Send a note or compose an email directly.
+              </p>
+
+              <form id="inquiry-form" novalidate>
+                <div class="form-grid form-grid--two">
+                  <div class="field">
+                    <label for="inq-name">Full Name</label>
+                    <input type="text" id="inq-name" name="name" autocomplete="name" required placeholder="Your name" />
+                    <span class="field-error" id="err-name" aria-live="polite"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="inq-phone">Phone Number</label>
+                    <input type="tel" id="inq-phone" name="phone" autocomplete="tel" required placeholder="604-000-0000" />
+                    <span class="field-error" id="err-phone" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <div class="form-grid form-grid--two" style="margin-top: 12px;">
+                  <div class="field">
+                    <label for="inq-email">Email Address</label>
+                    <input type="email" id="inq-email" name="email" autocomplete="email" required placeholder="you@example.com" />
+                    <span class="field-error" id="err-email" aria-live="polite"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="inq-topic">Model or Topic</label>
+                    <select id="inq-topic" name="topic">
+                      <option value="Mitsubishi Outlander">Mitsubishi Outlander</option>
+                      <option value="Mitsubishi Outlander PHEV">Mitsubishi Outlander PHEV</option>
+                      <option value="Mitsubishi Eclipse Cross">Mitsubishi Eclipse Cross</option>
+                      <option value="Mitsubishi RVR">Mitsubishi RVR</option>
+                      <option value="General Vehicle Availability">General Vehicle Availability</option>
+                      <option value="Financing & Pre-Approval Inquiry">Financing &amp; Pre-Approval Inquiry</option>
+                      <option value="Trade-In Appraisal">Trade-In Appraisal</option>
+                      <option value="Service Department">Service Department</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field" style="margin-top: 12px;">
+                  <label for="inq-message">Message</label>
+                  <textarea id="inq-message" name="message" rows="3" placeholder="Tell us how our team can help you."></textarea>
+                </div>
+
+                <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+                  <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                  <a href="tel:6042493888" class="btn btn-outline-dark tabular">Call 604-249-3888</a>
+                </div>
+
+                <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <!-- Google Map Embed -->
+            <div class="map-frame-wrap">
+              <iframe
+                class="map-frame"
+                title="Vancouver Mitsubishi Location Map"
+                src="https://www.google.com/maps?q=Vancouver+Mitsubishi,+1885+Clark+Drive,+Vancouver,+BC+V5N+3G5&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+              <div class="map-caption">
+                <span>Vancouver Mitsubishi · 1885 Clark Drive, Vancouver, BC</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Vancouver+Mitsubishi+1885+Clark+Drive+Vancouver+BC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#home" class="brand-link">
+            <svg width="26" height="22" viewBox="-42 -48 84 74" aria-hidden="true" focusable="false">
+              <polygon points="0,0 13,-22.517 0,-45.033 -13,-22.517" fill="#E60012" />
+              <polygon points="0,0 26,0 38.971,22.517 13,22.517" fill="#E60012" />
+              <polygon points="0,0 -26,0 -38.971,22.517 -13,22.517" fill="#E60012" />
+            </svg>
+            <span class="brand-wordmark">Vancouver Mitsubishi</span>
+          </a>
+          <p class="footer-brand-desc">
+            Proudly bringing Mitsubishi back to the Vancouver area with a full lineup of SUVs, plug-in hybrids, financing guidance, and dedicated service care.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#vehicles">Vehicles</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#financing">Financing</a></li>
+            <li><a href="#service">Service Department</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Dealership</div>
+          <ul class="footer-links tabular">
+            <li>1885 Clark Drive, Vancouver, BC V5N 3G5</li>
+            <li>Sales: <a href="tel:6042493888">604-249-3888</a></li>
+            <li>Service (Carson Leung): <a href="tel:6042493881">604-249-3881</a></li>
+            <li><a href="mailto:reception@mitsubishiservice.com">reception@mitsubishiservice.com</a></li>
+            <li><a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer">vancouvermitsubishi.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="current-year"></span> Vancouver Mitsubishi. All rights reserved.</span>
+        <div style="display: flex; gap: 20px;">
+          <a href="https://www.facebook.com/vancouvermitsubishi.ca" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/vancouver_mitsubishi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/@vancouvermitsubishi9072" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Footer year
+      var yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = String(new Date().getFullYear());
+      }
+
+      // Header scroll shadow / opacity
+      var header = document.getElementById('site-header');
+      function updateHeader() {
+        if (!header) return;
+        if (window.scrollY > 24) {
+          header.classList.add('is-scrolled');
+        } else {
+          header.classList.remove('is-scrolled');
+        }
+      }
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+
+      // Mobile Navigation Drawer
+      var menuToggle = document.getElementById('menu-toggle');
+      var mobileDrawer = document.getElementById('mobile-drawer');
+      var iconMenu = document.getElementById('icon-menu');
+      var iconClose = document.getElementById('icon-close');
+      var drawerLinks = mobileDrawer ? mobileDrawer.querySelectorAll('a') : [];
+
+      function setDrawerOpen(open) {
+        if (!menuToggle || !mobileDrawer) return;
+        mobileDrawer.classList.toggle('is-open', open);
+        mobileDrawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+        menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        if (iconMenu && iconClose) {
+          iconMenu.style.display = open ? 'none' : 'block';
+          iconClose.style.display = open ? 'block' : 'none';
+        }
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+
+      if (menuToggle && mobileDrawer) {
+        menuToggle.addEventListener('click', function () {
+          var isOpen = mobileDrawer.classList.contains('is-open');
+          setDrawerOpen(!isOpen);
+        });
+
+        drawerLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            setDrawerOpen(false);
+          });
+        });
+
+        window.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && mobileDrawer.classList.contains('is-open')) {
+            setDrawerOpen(false);
+            menuToggle.focus();
+          }
+        });
+      }
+
+      // Active navigation highlight on scroll
+      var sections = document.querySelectorAll('main section[id]');
+      var navLinks = document.querySelectorAll('.primary-nav .nav-link');
+
+      if ('IntersectionObserver' in window && sections.length && navLinks.length) {
+        var navObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                var id = entry.target.getAttribute('id');
+                navLinks.forEach(function (link) {
+                  var href = link.getAttribute('href');
+                  link.classList.toggle('is-active', href === '#' + id);
+                });
+              }
+            });
+          },
+          { rootMargin: '-40% 0px -50% 0px' }
+        );
+
+        sections.forEach(function (sec) {
+          navObserver.observe(sec);
+        });
+      }
+
+      // Vehicle Category Filters
+      var filterButtons = document.querySelectorAll('.filter-btn');
+      var vehicleCards = document.querySelectorAll('.vehicle-card');
+
+      filterButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var selected = btn.getAttribute('data-filter');
+
+          filterButtons.forEach(function (b) {
+            var isSelected = b === btn;
+            b.classList.toggle('is-active', isSelected);
+            b.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+          });
+
+          var visibleCards = [];
+          vehicleCards.forEach(function (card) {
+            var cats = (card.getAttribute('data-categories') || '').split(' ');
+            var match = cats.indexOf(selected) !== -1;
+            card.classList.toggle('is-hidden', !match);
+            if (match) {
+              visibleCards.push(card);
+            }
+          });
+
+          // Ensure clean full-width layout when only 1 card matches (e.g. Plug-in Hybrid)
+          vehicleCards.forEach(function (card) {
+            if (card.getAttribute('data-categories') === 'all') {
+              card.classList.toggle('is-wide', selected === 'all');
+            } else {
+              card.classList.toggle('is-wide', visibleCards.length === 1 && visibleCards[0] === card);
+            }
+          });
+        });
+      });
+
+      // "Request Information" buttons pre-select topic & scroll to contact form
+      var requestButtons = document.querySelectorAll('.request-info-btn');
+      var topicSelect = document.getElementById('inq-topic');
+      var nameInput = document.getElementById('inq-name');
+      var contactSection = document.getElementById('contact');
+
+      requestButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var model = btn.getAttribute('data-model');
+          if (topicSelect && model) {
+            var options = Array.prototype.slice.call(topicSelect.options);
+            var matched = options.some(function (opt) {
+              if (opt.value === model) {
+                topicSelect.value = model;
+                return true;
+              }
+              return false;
+            });
+            if (!matched) {
+              topicSelect.selectedIndex = 0;
+            }
+          }
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+          setTimeout(function () {
+            if (nameInput) nameInput.focus();
+          }, 450);
+        });
+      });
+
+      // Inquiry Form Validation & Submission Feedback
+      var inquiryForm = document.getElementById('inquiry-form');
+      var phoneInput = document.getElementById('inq-phone');
+      var emailInput = document.getElementById('inq-email');
+      var messageInput = document.getElementById('inq-message');
+      var errName = document.getElementById('err-name');
+      var errPhone = document.getElementById('err-phone');
+      var errEmail = document.getElementById('err-email');
+      var formStatus = document.getElementById('form-status');
+
+      function validateEmail(val) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      }
+
+      function validatePhone(val) {
+        var digits = val.replace(/\D/g, '');
+        return digits.length >= 10;
+      }
+
+      if (inquiryForm) {
+        inquiryForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var valid = true;
+
+          var nameVal = nameInput ? nameInput.value.trim() : '';
+          var phoneVal = phoneInput ? phoneInput.value.trim() : '';
+          var emailVal = emailInput ? emailInput.value.trim() : '';
+          var topicVal = topicSelect ? topicSelect.value : 'General Inquiry';
+          var messageVal = messageInput ? messageInput.value.trim() : '';
+
+          if (errName) errName.textContent = '';
+          if (errPhone) errPhone.textContent = '';
+          if (errEmail) errEmail.textContent = '';
+
+          if (nameVal.length < 2) {
+            if (errName) errName.textContent = 'Please enter your full name.';
+            valid = false;
+          }
+
+          if (!validatePhone(phoneVal)) {
+            if (errPhone) errPhone.textContent = 'Please enter a valid 10-digit phone number.';
+            valid = false;
+          }
+
+          if (!validateEmail(emailVal)) {
+            if (errEmail) errEmail.textContent = 'Please enter a valid email address.';
+            valid = false;
+          }
+
+          if (!valid) {
+            if (formStatus) {
+              formStatus.classList.remove('is-visible', 'is-success');
+            }
+            return;
+          }
+
+          if (formStatus) {
+            formStatus.innerHTML =
+              'Thank you, <strong>' +
+              nameVal.replace(/[<>&"]/g, '') +
+              '</strong>. Your inquiry regarding <strong>' +
+              topicVal.replace(/[<>&"]/g, '') +
+              '</strong> is ready. For immediate assistance, call Sales at <a href="tel:6042493888" style="color:#fff;text-decoration:underline;">604-249-3888</a> or visit <a href="https://www.vancouvermitsubishi.com/" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">vancouvermitsubishi.com</a>.';
+            formStatus.classList.add('is-visible', 'is-success');
+          }
+
+          // Clear fields after confirmation while keeping topic visible
+          if (nameInput) nameInput.value = '';
+          if (phoneInput) phoneInput.value = '';
+          if (emailInput) emailInput.value = '';
+          if (messageInput) messageInput.value = '';
+        });
+      }
+
+      // Subtle IntersectionObserver reveal animations
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && revealEls.length) {
+        var revealObserver = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+        );
+
+        revealEls.forEach(function (el) {
+          revealObserver.observe(el);
+        });
+      } else {
+        revealEls.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
