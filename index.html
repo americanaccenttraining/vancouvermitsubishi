@@ -3164,8 +3164,7 @@
               '?id=eq.1&select=business_name,sales_phone,service_contact_name,service_phone,email,address,logo_url,admin_claimed',
             {
               headers: {
-                apikey: SUPABASE_PUBLISHABLE_KEY,
-                Authorization: 'Bearer ' + SUPABASE_PUBLISHABLE_KEY
+                apikey: SUPABASE_PUBLISHABLE_KEY
               }
             }
           );
@@ -3363,7 +3362,6 @@
                 headers: {
                   'Content-Type': 'application/json',
                   apikey: SUPABASE_PUBLISHABLE_KEY,
-                  Authorization: 'Bearer ' + SUPABASE_PUBLISHABLE_KEY,
                   Prefer: 'return=minimal'
                 },
                 body: JSON.stringify(payload)
@@ -3371,7 +3369,18 @@
             );
 
             if (!response.ok) {
-              throw new Error('HTTP ' + response.status);
+              var errBody = {};
+              try {
+                errBody = await response.json();
+              } catch (parseErr) {}
+              var errCode = errBody.code || '';
+              if (errCode === '42501') {
+                throw new Error('PERMISSION_DENIED');
+              }
+              if (errCode === 'PGRST205') {
+                throw new Error('TABLE_MISSING');
+              }
+              throw new Error(errBody.message || ('HTTP ' + response.status));
             }
 
             showFormStatus(
@@ -3395,11 +3404,13 @@
             if (emailInput) emailInput.value = '';
             if (messageInput) messageInput.value = '';
           } catch (err) {
-            showFormStatus(
-              'error',
-              'Unable to save your appointment right now. Please try again or call our Sales desk directly at',
-              true
-            );
+            var errMsg = 'Unable to save your appointment right now. Please try again or call our Sales desk directly at';
+            if (err && err.message === 'PERMISSION_DENIED') {
+              errMsg = 'Booking database permissions are not enabled yet (GRANT INSERT / RLS policy needed in Supabase). Please call our Sales desk directly at';
+            } else if (err && err.message === 'TABLE_MISSING') {
+              errMsg = 'Booking table is not set up in Supabase yet. Please call our Sales desk directly at';
+            }
+            showFormStatus('error', errMsg, true);
           } finally {
             if (submitBtn) {
               submitBtn.disabled = false;
