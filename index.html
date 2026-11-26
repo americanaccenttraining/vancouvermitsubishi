@@ -1369,35 +1369,61 @@
       transform: none;
     }
 
-    .map-frame-wrap {
-      border: 1px solid var(--hairline);
+    .contact-section {
+      padding-bottom: 0;
+    }
+
+    .map-section-full {
+      margin-top: 72px;
+      width: 100%;
+      border-top: 1px solid var(--hairline);
       background-color: var(--soft-grey);
     }
 
     .map-frame {
       display: block;
       width: 100%;
-      height: 320px;
+      height: 360px;
       border: 0;
     }
 
+    @media (min-width: 768px) {
+      .map-frame {
+        height: 460px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .map-frame {
+        height: 520px;
+      }
+    }
+
     .map-caption {
-      padding: 14px 18px;
+      background-color: var(--white);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .map-caption-inner {
+      padding: 16px 0;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
       font-size: 13px;
       color: var(--ink-muted);
-      background-color: var(--white);
-      border-top: 1px solid var(--hairline);
     }
 
     .map-caption a {
       font-weight: 600;
       color: var(--black);
       text-decoration: underline;
+    }
+
+    .map-caption a:hover {
+      color: var(--red);
     }
 
     /* Footer */
@@ -1879,6 +1905,36 @@
       .admin-settings-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .admin-field--full {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .admin-field-hint {
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--silver);
+    }
+
+    .admin-current-account {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      background-color: #0e0e10;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      margin-bottom: 22px;
+      font-size: 13px;
+      color: var(--silver);
+    }
+
+    .admin-current-account strong {
+      color: var(--white);
+      font-weight: 600;
     }
 
     .logo-upload-box {
@@ -2479,7 +2535,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section section--light" id="contact">
+    <section class="section section--light contact-section" id="contact">
       <div class="container">
         <div class="contact-grid">
           <div class="reveal">
@@ -2636,30 +2692,32 @@
                 <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
               </form>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Google Map Embed -->
-            <div class="map-frame-wrap">
-              <iframe
-                id="dealership-map-iframe"
-                class="map-frame"
-                title="Dealership Location Map"
-                src="https://www.google.com/maps?q=Vancouver+Mitsubishi,+1885+Clark+Drive,+Vancouver,+BC+V5N+3G5&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen
-              ></iframe>
-              <div class="map-caption">
-                <span><span data-bind="business-name">Vancouver Mitsubishi</span> · <span data-bind="address">1885 Clark Drive, Vancouver, BC, V5N 3G5, Canada</span></span>
-                <a
-                  id="dealership-map-link"
-                  href="https://www.google.com/maps/search/?api=1&query=Vancouver+Mitsubishi+1885+Clark+Drive+Vancouver+BC"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open in Google Maps
-                </a>
-              </div>
-            </div>
+      <!-- Full-Page Width Google Map -->
+      <div class="map-section-full">
+        <iframe
+          id="dealership-map-iframe"
+          class="map-frame"
+          title="Dealership Location Map"
+          src="https://www.google.com/maps?q=Vancouver+Mitsubishi,+1885+Clark+Drive,+Vancouver,+BC+V5N+3G5&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+        <div class="map-caption">
+          <div class="container map-caption-inner">
+            <span><strong style="color: var(--black);" data-bind="business-name">Vancouver Mitsubishi</strong> · <span data-bind="address">1885 Clark Drive, Vancouver, BC, V5N 3G5, Canada</span></span>
+            <a
+              id="dealership-map-link"
+              href="https://www.google.com/maps/search/?api=1&query=Vancouver+Mitsubishi+1885+Clark+Drive+Vancouver+BC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Google Maps
+            </a>
           </div>
         </div>
       </div>
@@ -2791,6 +2849,7 @@
         <div class="admin-tabs" role="tablist" aria-label="Admin Sections">
           <button type="button" class="admin-tab-btn is-active" data-admin-tab="bookings" role="tab" aria-selected="true">Appointment Bookings</button>
           <button type="button" class="admin-tab-btn" data-admin-tab="settings" role="tab" aria-selected="false">Business Info &amp; Logo</button>
+          <button type="button" class="admin-tab-btn" data-admin-tab="account" role="tab" aria-selected="false">Account &amp; Handover</button>
         </div>
 
         <!-- Tab 1: Bookings -->
@@ -2904,12 +2963,61 @@
                   <label for="set-address">Dealership Address</label>
                   <input type="text" id="set-address" required maxlength="220" />
                 </div>
+                <div class="admin-field admin-field--full">
+                  <label for="set-maps-url">Google Maps Link or Embed URL (Optional)</label>
+                  <input
+                    type="url"
+                    id="set-maps-url"
+                    maxlength="1000"
+                    placeholder="https://www.google.com/maps/place/... or https://maps.app.goo.gl/... or embed URL"
+                  />
+                  <div class="admin-field-hint">
+                    Updates the full-width website map, &ldquo;Open in Google Maps&rdquo;, and Google Reviews links. Leave blank to auto-locate from Business Name and Address.
+                  </div>
+                </div>
               </div>
 
               <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px;">
                 <button type="submit" class="btn btn-primary" id="admin-save-settings-btn">Save &amp; Update Live Site</button>
               </div>
               <div class="admin-notice" id="admin-settings-notice" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Tab 3: Admin Account & Handover -->
+        <section id="admin-tab-account" style="display:none;">
+          <div class="admin-settings-card">
+            <h3 style="font-size:22px;font-weight:600;margin-bottom:8px;">Admin Credentials &amp; Client Handover</h3>
+            <p class="admin-auth-desc" style="margin-bottom:20px;">
+              Update the administrator login email (username) and/or password when transferring dashboard ownership to your client. Public registration remains permanently locked to this single admin slot.
+            </p>
+
+            <div class="admin-current-account">
+              <span>Current Admin Email</span>
+              <strong id="acc-current-email">—</strong>
+            </div>
+
+            <form id="admin-account-form" novalidate>
+              <div class="admin-settings-grid">
+                <div class="admin-field admin-field--full">
+                  <label for="acc-new-email">Admin Login Email (Username)</label>
+                  <input type="email" id="acc-new-email" required autocomplete="email" maxlength="160" placeholder="client-admin@example.com" />
+                </div>
+                <div class="admin-field">
+                  <label for="acc-new-pass">New Password (Optional)</label>
+                  <input type="password" id="acc-new-pass" minlength="8" autocomplete="new-password" placeholder="Leave blank to keep current password" />
+                </div>
+                <div class="admin-field">
+                  <label for="acc-confirm-pass">Confirm New Password</label>
+                  <input type="password" id="acc-confirm-pass" minlength="8" autocomplete="new-password" placeholder="Re-enter new password" />
+                </div>
+              </div>
+
+              <div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px;">
+                <button type="submit" class="btn btn-primary" id="admin-account-save-btn">Update Admin Credentials</button>
+              </div>
+              <div class="admin-notice" id="admin-account-notice" role="status" aria-live="polite"></div>
             </form>
           </div>
         </section>
@@ -3055,6 +3163,7 @@
         email: 'reception@mitsubishiservice.com',
         address: '1885 Clark Drive, Vancouver, BC, V5N 3G5, Canada',
         logo_url: '',
+        google_maps_url: '',
         admin_claimed: false
       };
 
@@ -3066,6 +3175,64 @@
       function isSafeLogoUrl(url) {
         if (!url || typeof url !== 'string') return false;
         return /^data:image\/(png|jpeg|jpg|webp|gif);base64,[A-Za-z0-9+/=]+$/.test(url) || /^https:\/\/[^\s"'<>]+$/.test(url);
+      }
+
+      function isSafeGoogleMapsUrl(url) {
+        if (!url || typeof url !== 'string') return false;
+        try {
+          var parsed = new URL(url.trim());
+          if (parsed.protocol !== 'https:') return false;
+          var host = parsed.hostname.toLowerCase();
+          return (
+            host === 'maps.google.com' ||
+            host === 'maps.app.goo.gl' ||
+            host === 'goo.gl' ||
+            /(^|\.)google\.[a-z.]+$/i.test(host)
+          );
+        } catch (err) {
+          return false;
+        }
+      }
+
+      function resolveGoogleMapsUrls(rawUrl, businessName, address) {
+        var fallbackQuery = encodeURIComponent(businessName + ', ' + address);
+        var defaultEmbed = 'https://www.google.com/maps?q=' + fallbackQuery + '&output=embed';
+        var defaultLink = 'https://www.google.com/maps/search/?api=1&query=' + fallbackQuery;
+
+        var clean = typeof rawUrl === 'string' ? rawUrl.trim() : '';
+        if (!clean || !isSafeGoogleMapsUrl(clean)) {
+          return { embedSrc: defaultEmbed, linkHref: defaultLink };
+        }
+
+        var linkHref = clean;
+        var embedSrc = defaultEmbed;
+
+        try {
+          var parsed = new URL(clean);
+          var path = parsed.pathname || '';
+
+          // 1. Direct Google Maps embed URL (/maps/embed or ?output=embed)
+          if (/\/maps\/embed/i.test(path) || parsed.searchParams.get('output') === 'embed') {
+            embedSrc = clean;
+          } else {
+            // 2. Try extracting coordinates (/@lat,lng) or query (?q= / ?query= / /maps/place/<name>)
+            var coordMatch = clean.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+            var qParam = parsed.searchParams.get('q') || parsed.searchParams.get('query');
+            var placeMatch = path.match(/\/maps\/place\/([^/]+)/i);
+
+            if (coordMatch) {
+              embedSrc = 'https://www.google.com/maps?q=' + encodeURIComponent(coordMatch[1] + ',' + coordMatch[2]) + '&z=15&output=embed';
+            } else if (qParam) {
+              embedSrc = 'https://www.google.com/maps?q=' + encodeURIComponent(qParam) + '&output=embed';
+            } else if (placeMatch && placeMatch[1]) {
+              embedSrc = 'https://www.google.com/maps?q=' + encodeURIComponent(decodeURIComponent(placeMatch[1].replace(/\+/g, ' '))) + '&output=embed';
+            }
+          }
+        } catch (err) {
+          embedSrc = defaultEmbed;
+        }
+
+        return { embedSrc: embedSrc, linkHref: linkHref };
       }
 
       function normalizeTelHref(phone) {
@@ -3084,6 +3251,7 @@
         var mail = currentSettings.email || 'reception@mitsubishiservice.com';
         var addr = currentSettings.address || '1885 Clark Drive, Vancouver, BC, V5N 3G5, Canada';
         var logo = isSafeLogoUrl(currentSettings.logo_url) ? currentSettings.logo_url : '';
+        var mapsUrl = isSafeGoogleMapsUrl(currentSettings.google_maps_url) ? currentSettings.google_maps_url.trim() : '';
 
         document.title = bName + ' | The Drive Is Back in Vancouver';
 
@@ -3134,18 +3302,18 @@
         });
 
         // Sync Google Map & Google Reviews links
-        var mapQuery = encodeURIComponent(bName + ', ' + addr);
+        var resolvedMap = resolveGoogleMapsUrls(mapsUrl, bName, addr);
         var mapIframe = document.getElementById('dealership-map-iframe');
         var mapLink = document.getElementById('dealership-map-link');
         var reviewsLink = document.getElementById('reviews-google-link');
-        if (mapIframe) {
-          mapIframe.setAttribute('src', 'https://www.google.com/maps?q=' + mapQuery + '&output=embed');
+        if (mapIframe && mapIframe.getAttribute('src') !== resolvedMap.embedSrc) {
+          mapIframe.setAttribute('src', resolvedMap.embedSrc);
         }
         if (mapLink) {
-          mapLink.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + mapQuery);
+          mapLink.setAttribute('href', resolvedMap.linkHref);
         }
         if (reviewsLink) {
-          reviewsLink.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + mapQuery);
+          reviewsLink.setAttribute('href', resolvedMap.linkHref);
         }
 
         // Update footer link text based on whether single admin slot is claimed
@@ -3157,17 +3325,27 @@
 
       async function loadPublicSettings() {
         try {
+          var fullSelect = 'business_name,sales_phone,service_contact_name,service_phone,email,address,logo_url,google_maps_url,admin_claimed';
           var res = await fetch(
-            SUPABASE_URL +
-              '/rest/v1/' +
-              SUPABASE_SETTINGS_TABLE +
-              '?id=eq.1&select=business_name,sales_phone,service_contact_name,service_phone,email,address,logo_url,admin_claimed',
+            SUPABASE_URL + '/rest/v1/' + SUPABASE_SETTINGS_TABLE + '?id=eq.1&select=' + fullSelect,
             {
               headers: {
                 apikey: SUPABASE_PUBLISHABLE_KEY
               }
             }
           );
+          if (!res.ok && res.status === 400) {
+            // Backward-compatible fallback if google_maps_url column hasn't been added yet
+            var baseSelect = 'business_name,sales_phone,service_contact_name,service_phone,email,address,logo_url,admin_claimed';
+            res = await fetch(
+              SUPABASE_URL + '/rest/v1/' + SUPABASE_SETTINGS_TABLE + '?id=eq.1&select=' + baseSelect,
+              {
+                headers: {
+                  apikey: SUPABASE_PUBLISHABLE_KEY
+                }
+              }
+            );
+          }
           if (!res.ok) return false;
           var rows = await res.json();
           if (Array.isArray(rows) && rows.length > 0) {
@@ -3454,6 +3632,7 @@
       var adminTabBtns = document.querySelectorAll('.admin-tab-btn');
       var adminTabBookings = document.getElementById('admin-tab-bookings');
       var adminTabSettings = document.getElementById('admin-tab-settings');
+      var adminTabAccount = document.getElementById('admin-tab-account');
 
       var adminSearchInput = document.getElementById('admin-search-input');
       var adminStatusFilter = document.getElementById('admin-status-filter');
@@ -3473,12 +3652,21 @@
       var setServicePhone = document.getElementById('set-service-phone');
       var setServiceContact = document.getElementById('set-service-contact');
       var setAddress = document.getElementById('set-address');
+      var setMapsUrl = document.getElementById('set-maps-url');
       var setLogoFile = document.getElementById('set-logo-file');
       var setLogoReset = document.getElementById('set-logo-reset');
       var adminLogoDefaultSvg = document.getElementById('admin-logo-default-svg');
       var adminLogoPreviewImg = document.getElementById('admin-logo-preview-img');
       var adminSaveSettingsBtn = document.getElementById('admin-save-settings-btn');
       var adminSettingsNotice = document.getElementById('admin-settings-notice');
+
+      var adminAccountForm = document.getElementById('admin-account-form');
+      var accCurrentEmail = document.getElementById('acc-current-email');
+      var accNewEmail = document.getElementById('acc-new-email');
+      var accNewPass = document.getElementById('acc-new-pass');
+      var accConfirmPass = document.getElementById('acc-confirm-pass');
+      var adminAccountSaveBtn = document.getElementById('admin-account-save-btn');
+      var adminAccountNotice = document.getElementById('admin-account-notice');
 
       function setAdminNotice(el, kind, text) {
         if (!el) return;
@@ -3588,7 +3776,17 @@
         if (setServicePhone) setServicePhone.value = currentSettings.service_phone || '';
         if (setServiceContact) setServiceContact.value = currentSettings.service_contact_name || '';
         if (setAddress) setAddress.value = currentSettings.address || '';
+        if (setMapsUrl) setMapsUrl.value = currentSettings.google_maps_url || '';
         updateSettingsLogoPreview(currentSettings.logo_url || '');
+      }
+
+      function populateAccountForm() {
+        var currentEmail = adminSession && adminSession.user ? adminSession.user.email || '' : '';
+        if (accCurrentEmail) accCurrentEmail.textContent = currentEmail || '—';
+        if (accNewEmail) accNewEmail.value = currentEmail;
+        if (accNewPass) accNewPass.value = '';
+        if (accConfirmPass) accConfirmPass.value = '';
+        setAdminNotice(adminAccountNotice, 'info', '');
       }
 
       async function showAdminDashboard() {
@@ -3600,6 +3798,7 @@
           adminSessionEmailEl.textContent = adminSession && adminSession.user ? adminSession.user.email : '';
         }
         populateSettingsForm();
+        populateAccountForm();
         await fetchAdminBookings();
       }
 
@@ -3796,6 +3995,7 @@
           });
           if (adminTabBookings) adminTabBookings.style.display = target === 'bookings' ? 'block' : 'none';
           if (adminTabSettings) adminTabSettings.style.display = target === 'settings' ? 'block' : 'none';
+          if (adminTabAccount) adminTabAccount.style.display = target === 'account' ? 'block' : 'none';
         });
       });
 
@@ -4151,9 +4351,14 @@
           var svcPhone = setServicePhone ? setServicePhone.value.trim() : '';
           var svcName = setServiceContact ? setServiceContact.value.trim() : '';
           var addr = setAddress ? setAddress.value.trim() : '';
+          var mapsUrl = setMapsUrl ? setMapsUrl.value.trim() : '';
 
           if (!bName || !sPhone || !validateEmail(mail) || !svcPhone || !svcName || !addr) {
             setAdminNotice(adminSettingsNotice, 'error', 'Please fill in all business details with a valid email address.');
+            return;
+          }
+          if (mapsUrl && !isSafeGoogleMapsUrl(mapsUrl)) {
+            setAdminNotice(adminSettingsNotice, 'error', 'Please enter a valid https:// Google Maps link or leave the field blank.');
             return;
           }
 
@@ -4170,6 +4375,7 @@
             service_contact_name: svcName,
             address: addr,
             logo_url: pendingLogoUrl || null,
+            google_maps_url: mapsUrl || null,
             updated_at: new Date().toISOString()
           };
 
@@ -4187,22 +4393,164 @@
                 body: JSON.stringify(payload)
               }
             );
+
+            var missingMapsCol = false;
             if (!res.ok) {
-              throw new Error('Failed to save settings (HTTP ' + res.status + ').');
+              var errBody = '';
+              try { errBody = await res.text(); } catch (readErr) {}
+              if (res.status === 400 && /google_maps_url/i.test(errBody)) {
+                missingMapsCol = true;
+                var fallbackPayload = Object.assign({}, payload);
+                delete fallbackPayload.google_maps_url;
+                res = await fetch(
+                  SUPABASE_URL + '/rest/v1/' + SUPABASE_SETTINGS_TABLE + '?id=eq.1',
+                  {
+                    method: 'PATCH',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      apikey: SUPABASE_PUBLISHABLE_KEY,
+                      Authorization: 'Bearer ' + adminSession.access_token,
+                      Prefer: 'return=representation'
+                    },
+                    body: JSON.stringify(fallbackPayload)
+                  }
+                );
+                if (!res.ok) {
+                  throw new Error('Failed to save settings (HTTP ' + res.status + ').');
+                }
+                payload = fallbackPayload;
+              } else {
+                throw new Error('Failed to save settings (HTTP ' + res.status + ').');
+              }
             }
+
             var updatedRows = await res.json();
             if (Array.isArray(updatedRows) && updatedRows.length > 0) {
-              applySiteSettings(updatedRows[0]);
+              applySiteSettings(Object.assign({}, updatedRows[0], missingMapsCol ? { google_maps_url: mapsUrl } : {}));
             } else {
-              applySiteSettings(payload);
+              applySiteSettings(Object.assign({}, payload, missingMapsCol ? { google_maps_url: mapsUrl } : {}));
             }
-            setAdminNotice(adminSettingsNotice, 'success', 'Business information and branding updated on the live website.');
+
+            if (missingMapsCol) {
+              setAdminNotice(
+                adminSettingsNotice,
+                'info',
+                'Business info saved and applied to this page. To persist the Google Maps link in Supabase, add the google_maps_url column to public.site_settings.'
+              );
+            } else {
+              setAdminNotice(adminSettingsNotice, 'success', 'Business information, branding, and map updated on the live website.');
+            }
           } catch (err) {
             setAdminNotice(adminSettingsNotice, 'error', err.message || 'Unable to save settings.');
           } finally {
             if (adminSaveSettingsBtn) {
               adminSaveSettingsBtn.disabled = false;
               adminSaveSettingsBtn.textContent = 'Save & Update Live Site';
+            }
+          }
+        });
+      }
+
+      if (adminAccountForm) {
+        adminAccountForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          if (!adminSession || !adminSession.access_token) return;
+          setAdminNotice(adminAccountNotice, 'info', '');
+
+          var currentEmail = adminSession.user && adminSession.user.email ? adminSession.user.email.trim().toLowerCase() : '';
+          var newEmail = accNewEmail ? accNewEmail.value.trim() : '';
+          var newPass = accNewPass ? accNewPass.value : '';
+          var confirmPass = accConfirmPass ? accConfirmPass.value : '';
+
+          var emailChanged = Boolean(newEmail && newEmail.toLowerCase() !== currentEmail);
+          var passChanged = Boolean(newPass || confirmPass);
+
+          if (!emailChanged && !passChanged) {
+            setAdminNotice(adminAccountNotice, 'error', 'Enter a new email address and/or a new password to update.');
+            return;
+          }
+          if (emailChanged && !validateEmail(newEmail)) {
+            setAdminNotice(adminAccountNotice, 'error', 'Please enter a valid new admin email address.');
+            return;
+          }
+          if (passChanged) {
+            if (newPass.length < 8) {
+              setAdminNotice(adminAccountNotice, 'error', 'New password must be at least 8 characters.');
+              return;
+            }
+            if (newPass !== confirmPass) {
+              setAdminNotice(adminAccountNotice, 'error', 'New passwords do not match.');
+              return;
+            }
+          }
+
+          var updatePayload = {};
+          if (emailChanged) updatePayload.email = newEmail;
+          if (passChanged) updatePayload.password = newPass;
+
+          if (adminAccountSaveBtn) {
+            adminAccountSaveBtn.disabled = true;
+            adminAccountSaveBtn.textContent = 'Updating Credentials...';
+          }
+
+          try {
+            var res = await fetch(SUPABASE_URL + '/auth/v1/user', {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+                apikey: SUPABASE_PUBLISHABLE_KEY,
+                Authorization: 'Bearer ' + adminSession.access_token
+              },
+              body: JSON.stringify(updatePayload)
+            });
+
+            if (res.status === 401) {
+              await signOutAdmin();
+              setAdminNotice(admLoginNotice, 'error', 'Your session expired. Please sign in again.');
+              return;
+            }
+
+            var data = {};
+            try { data = await res.json(); } catch (parseErr) {}
+
+            if (!res.ok) {
+              throw new Error(data.msg || data.error_description || data.message || 'Unable to update admin credentials (HTTP ' + res.status + ').');
+            }
+
+            if (data && data.id) {
+              adminSession.user = data;
+            } else if (emailChanged && !data.new_email && adminSession.user) {
+              adminSession.user.email = newEmail;
+            }
+
+            if (accNewPass) accNewPass.value = '';
+            if (accConfirmPass) accConfirmPass.value = '';
+
+            var updatedEmail = adminSession.user && adminSession.user.email ? adminSession.user.email : currentEmail;
+            if (adminSessionEmailEl) adminSessionEmailEl.textContent = updatedEmail;
+            if (accCurrentEmail) accCurrentEmail.textContent = updatedEmail || '—';
+
+            var msgParts = [];
+            if (passChanged) {
+              msgParts.push('Password updated');
+            }
+            if (emailChanged) {
+              if (data && data.new_email) {
+                msgParts.push('Confirmation email sent to ' + data.new_email + ' (check inbox to complete email handover)');
+              } else if (updatedEmail.toLowerCase() === newEmail.toLowerCase()) {
+                msgParts.push('Admin login email updated to ' + updatedEmail);
+              } else {
+                msgParts.push('Email change requested — check the new inbox to confirm');
+              }
+            }
+
+            setAdminNotice(adminAccountNotice, 'success', msgParts.join('. ') + '. Single-admin access lock remains active.');
+          } catch (err) {
+            setAdminNotice(adminAccountNotice, 'error', err.message || 'Failed to update admin credentials.');
+          } finally {
+            if (adminAccountSaveBtn) {
+              adminAccountSaveBtn.disabled = false;
+              adminAccountSaveBtn.textContent = 'Update Admin Credentials';
             }
           }
         });
